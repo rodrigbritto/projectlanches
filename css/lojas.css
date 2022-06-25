@@ -1,0 +1,494 @@
+
+.header-1{
+    height: 50px;
+    background: rgb(105, 103, 51);
+    position: relative;
+    
+}
+.li-1{
+    list-style: none;
+}
+.fa-solid, .fa-burger{
+    width: 90px;
+    margin: 10px 0 0 40px;
+    color: #000;
+    font-size: 33px;
+    
+    
+}
+.nav-1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.nav-1 ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-1 li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 0 15px 0 0;
+    padding: 13px;
+}
+
+.nav-1 a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+}
+
+.nav-1 a:hover{
+    color: rgb(221, 34, 34);
+}
+
+
+
+
+
+
+
+
+
+body {
+    position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .card {
+    position: relative;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    top: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /*Light blue cover above the slide show*/
+  .card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 900;
+  
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    background-color: rgba(140, 22, 115, 0.2);
+  }
+  
+  .card_part {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    transform: translateX( 700px );
+    background-image: url( https://st4.depositphotos.com/6437402/30959/i/450/depositphotos_309598204-stock-photo-craft-beef-burger.jpg );
+    
+    animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+  }
+  
+  
+  .card_part.card_part-two {
+    z-index: 6;
+    background-image: url(https://thumbs.dreamstime.com/b/m%C3%A3o-com-hamb%C3%BArguer-artesanal-de-carne-bovino-queijo-ovo-bacon-e-picles-sobre-mesa-madeira-fundo-r%C3%BAssia-159550136.jpg );
+    animation-delay: 7s;
+  }
+  
+  .card_part.card_part-three {
+    z-index: 5;
+    background-image: url(https://st4.depositphotos.com/6437402/30959/i/450/depositphotos_309598204-stock-photo-craft-beef-burger.jpg);
+    animation-delay: 14s;
+  }
+  
+  .card_part.card_part-four {
+    z-index: 4;
+    background-image: url(https://img.freepik.com/fotos-gratis/hamburguer-em-fundo-madeira_124507-6968.jpg);
+    animation-delay: 21s;
+  }
+  
+  
+  @keyframes opaqTransition {
+    3% { transform: translateX( 0 ); }
+    25% { transform: translateX( 0 ); }
+    28% { transform: translateX( -700px ); }
+    100% { transform: translateX( -700px ); }
+  }
+
+
+
+  #container {
+    position: center;
+    margin: auto;
+    
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    color: #1a1a1a;
+    font-family: arial;
+    font-size: 25pt;
+    background: rgb(105, 103, 51);
+    text-align: center;
+
+    user-select: none;
+}
+
+
+
+.section-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+  
+}
+
+.card-4{
+    left: 10px;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    position: relative;
+    width: 260px;
+    height: 260px;
+    padding: 20px;
+    color: #a18a96;
+    background: url(../img/hambuguer4.jpeg) center no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card__content-4{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(105, 103, 51);
+    border-top-left-radius: 20px;
+    transform: translateY(70px);
+    transition: transform .25s;
+}
+
+.card__content-4::before{
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px rgb(51, 47, 0);
+}
+.card__title-4{
+    color: #ffffff;
+    line-height: 15px;
+}
+.card_subtitle-4{
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+.card__description-4{
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;
+    color: white;
+}
+.card-4:hover .card__content-4{
+    transform: translateY(0);
+}
+.card-4:hover .card__description-4{
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+
+
+
+.card-5{
+    left: 10px;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    position: relative;
+    width: 260px;
+    height: 260px;
+    padding: 20px;
+    color: #a18a96;
+    background: url(../img/hambuguer5.jpeg) center no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card__content-5{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(105, 103, 51);
+    border-top-left-radius: 20px;
+    transform: translateY(70px);
+    transition: transform .25s;
+}
+
+.card__content-5::before{
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px rgb(51, 47, 0);
+}
+.card__title-5{
+    color: #ffffff;
+    line-height: 15px;
+}
+.card_subtitle-5{
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+.card__description-5{
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;
+    color: white;
+}
+.card-5:hover .card__content-5{
+    transform: translateY(0);
+}
+.card-5:hover .card__description-5{
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+
+
+.card-6{
+    left: 10px;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    position: relative;
+    width: 260px;
+    height: 260px;
+    padding: 20px;
+    color: #a18a96;
+    background: url(../img/hambuguer6.jpeg) center no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card__content-6{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(105, 103, 51);
+    border-top-left-radius: 20px;
+    transform: translateY(70px);
+    transition: transform .25s;
+}
+
+.card__content-6::before{
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px rgb(51, 47, 0);
+}
+.card__title-6{
+    color: #ffffff;
+    line-height: 15px;
+}
+.card_subtitle-6{
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: white;
+}
+.card__description-6{
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;
+    color: white;
+}
+.card-6:hover .card__content-6{
+    transform: translateY(0);
+}
+.card-6:hover .card__description-6{
+    opacity: 1;
+    transition-delay: .25s;
+}
+
+
+
+
+
+
+
+
+.article-1{
+    position: relative;
+    background: rgb(122, 121, 65);
+    padding: 25px;
+}
+  .p-1 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 40px;
+    font-family: Hack, sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000, #fff, rgb(122, 125, 55));
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 4s linear infinite;
+    position: relative;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+
+
+.p-2{
+    letter-spacing: 5px;
+    background-clip: text;
+    text-transform: uppercase;
+    animation: shine 4s linear infinite;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    animation: shine 4s linear infinite;
+    
+}
+
+.map{
+    position: center;
+    margin: auto;
+    text-align: center;
+}
+
+.h-4{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.dic-7{
+    background-color: rgb(122, 121, 65);
+    height: 50px;
+}
+
+
+
+.main-footer ul li{
+    margin: auto;
+    position: relative;
+    list-style-type: none;
+    font-size: 70px;
+    display: inline-block;
+    text-align: center;
+    left: 350px;
+    
+
+}
+
+
+
+.button-default{
+    background-color: #727e11;
+    border: 2px solid #2f3432;
+    color: white;
+    padding: 1em 8.2em;
+    border-radius: 3px;
+    font-size: .8em;
+    display: inline-block;
+    width: auto;
+    transition: all .5s;
+    cursor: pointer;
+    
+    top: 300px;
+    margin: 0;
+}
+
+.section-4{
+    
+    bottom: 308px;
+    padding-left: 26px;
+    letter-spacing: 26px;
+}
+.fa-whatsapp{
+    color: green;
+}
+.fa-instagram{
+    color: rgb(102, 6, 94);
+}
+.p-7{
+    position: relative;
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    width: 100px;
+    left: 100px;
+    font-family: sans-serif;
+    
+}
+.p-7 a{
+    text-decoration:none;
+    color:#000;
+}
